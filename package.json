@@ -11,6 +11,7 @@
   "author": "Humberto Araiza",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "colors": "^1.4.0",
     "inquirer": "^8.2.0"
   }

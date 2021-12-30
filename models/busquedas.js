@@ -1,16 +1,25 @@
+const axios = require('axios');
+
 class Busquedas {
 
-    historial = ['Tegucigalpa','Madrid','San Jose','Bogota'];
+    historial = ['Tegucigalpa', 'Madrid', 'San Jose', 'Bogota'];
 
-    constructor(){
+    constructor() {
         // TODO: leer DB si existe
     }
 
-    async ciudad(lugar=''){
-        //peticion http
-        console.log(lugar);
+    async ciudad(lugar = '') {
 
-        return []; //retornar los lugare que coincida con el lugar buscado
+        try {                             
+            const resp = await axios.get('https://reqres.in/api/users?page=2');
+            console.log(resp.data);
+            return [];
+        }
+        catch (error) {
+            return [];
+        }
+
+
     }
 }
 
